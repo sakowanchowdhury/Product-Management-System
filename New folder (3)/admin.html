@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <base href="https://khelagharthakurgaon.com/soft/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Khela Ghar Thakurgaon</title>
+    <link rel="shortcut icon" href="https://khelagharthakurgaon.com/soft/themes/default/admin/assets/images/icon.png" />
+    <link href="https://khelagharthakurgaon.com/soft/themes/default/admin/assets/styles/theme.css" rel="stylesheet" />
+    <link href="https://khelagharthakurgaon.com/soft/themes/default/admin/assets/styles/style.css" rel="stylesheet" />
+    <link href="https://khelagharthakurgaon.com/soft/assets/custom/custom.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://khelagharthakurgaon.com/soft/themes/default/admin/assets/js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="https://khelagharthakurgaon.com/soft/themes/default/admin/assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://khelagharthakurgaon.com/soft/themes/default/admin/assets/js/jquery.js"></script>
+    <![endif]-->
+    <noscript><style type="text/css">#loading { display: none; }</style></noscript>
+    <script type="text/javascript">
+        $(window).load(function() {
+            $("#loading").fadeOut("slow");
+        });
+    </script>
+</head>
+
+<body>
+    <noscript>
+    <div class="global-site-notice noscript">
+        <div class="notice-inner">
+            <p><strong>JavaScript seems to be disabled in your browser.</strong><br>You must have JavaScript enabled in
+                your browser to utilize the functionality of this website.</p>
+        </div>
+    </div>
+</noscript>
+    <div id="loading"></div>
+    <div id="app_wrapper">
+        <header id="header" class="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="https://khelagharthakurgaon.com/soft/admin/"><span class="logo">Khela Ghar Thakurgaon</span></a>
+
+                <div class="btn-group visible-xs pull-right btn-visible-sm">
+                    <button class="navbar-toggle btn" type="button" data-toggle="collapse" data-target="#sidebar_menu">
+                    <span class="fa fa-bars"></span>
+                </button>
+                    <a href="https://khelagharthakurgaon.com/soft/admin/pos" class="btn">
+                    <span class="fa fa-th-large"></span>
+                </a>
+                    <a href="https://khelagharthakurgaon.com/soft/admin/calendar" class="btn">
+                    <span class="fa fa-calendar"></span>
+                </a>
+                    <a href="https://khelagharthakurgaon.com/soft/admin/users/profile/8" class="btn">
+                    <span class="fa fa-user"></span>
+                </a>
+                    <a href="https://khelagharthakurgaon.com/soft/admin/logout" class="btn">
+                    <span class="fa fa-sign-out"></span>
+                </a>
+                </div>
+                <div class="header-nav">
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="dropdown">
+                            <a class="btn account dropdown-toggle" data-toggle="dropdown" href="#">
+                            <img alt="" src="https://khelagharthakurgaon.com/soft/assets/images/male.png" class="mini_avatar img-rounded">
+
+                            <div class="user">
+                                <span>Welcome masum</span>
+                            </div>
+                        </a>
+                            <ul class="dropdown-menu pull-right">
+                                <li>
+                                    <a href="https://khelagharthakurgaon.com/soft/admin/users/profile/8">
+                                    <i class="fa fa-user"></i> Profile                                </a>
+                                </li>
+                                <li>
+                                    <a href="https://khelagharthakurgaon.com/soft/admin/users/profile/8/#cpassword"><i class="fa fa-key"></i> Change Password                                </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="https://khelagharthakurgaon.com/soft/admin/logout">
+                                    <i class="fa fa-sign-out"></i> Logout                                </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="dropdown hidden-xs"><a class="btn tip" title="Dashboard" data-placement="bottom" href="https://khelagharthakurgaon.com/soft/admin/welcome"><i class="fa fa-dashboard"></i></a></li>
+                        <a href="https://khelagharthakurgaon.com/soft/admin/pos" class="btn">
+                        <span class="fa fa-th-large"></span>
+                    </a>
+                        <li class="dropdown hidden-xs">
+                            <a class="btn tip" title="Calculator" data-placement="bottom" href="#" data-toggle="dropdown">
+                            <i class="fa fa-calculator"></i>
+                        </a>
+                            <ul class="dropdown-menu pull-right calc">
+                                <li class="dropdown-content">
+                                    <span id="inlineCalc"></span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown hidden-sm">
+                            <a class="btn tip" title="Notifications" data-placement="bottom" href="#" data-toggle="dropdown">
+                                <i class="fa fa-info-circle"></i>
+                                <span class="number blightOrange black">1</span>
+                            </a>
+                            <ul class="dropdown-menu pull-right content-scroll">
+                                <li class="dropdown-header"><i class="fa fa-info-circle"></i> Notifications</li>
+                                <li class="dropdown-content">
+                                    <div class="scroll-div">
+                                        <div class="top-menu-scroll">
+                                            <ol class="oe">
+                                                <li>
+                                                    <p>Thank you for purchasing Gowsia IT POS. If you find any error/bug, please email to gowsiait@gmail.com with details. You can send us your valued suggestions/feedback too.</p>
+                                                    <p>Contact Number: 01717486926</p>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown hidden-xs">
+                            <a class="btn tip" title="Calendar" data-placement="bottom" href="https://khelagharthakurgaon.com/soft/admin/calendar">
+                            <i class="fa fa-calendar"></i>
+                        </a>
+                        </li>
+                        <li class="dropdown hidden-sm">
+                            <a class="btn tip" title="Styles" data-placement="bottom" data-toggle="dropdown" href="#">
+                            <i class="fa fa-css3"></i>
+                        </a>
+                            <ul class="dropdown-menu pull-right">
+                                <li class="bwhite noPadding">
+                                    <a href="#" id="fixed" class="">
+                                    <i class="fa fa-angle-double-left"></i>
+                                    <span id="fixedText">Fixed</span>
+                                </a>
+                                    <a href="#" id="cssLight" class="grey">
+                                    <i class="fa fa-stop"></i> Grey
+                                </a>
+                                    <a href="#" id="cssBlue" class="blue">
+                                    <i class="fa fa-stop"></i> Blue
+                                </a>
+                                    <a href="#" id="cssBlack" class="black">
+                                   <i class="fa fa-stop"></i> Black
+                               </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown hidden-xs">
+                            <a class="btn tip" title="Language" data-placement="bottom" data-toggle="dropdown" href="#">
+                            <img src="https://khelagharthakurgaon.com/soft/assets/images/english.png" alt="">
+                        </a>
+                            <ul class="dropdown-menu pull-right">
+                                <li>
+                                    <a href="https://khelagharthakurgaon.com/soft/admin/welcome/language/arabic">
+                                        <img src="https://khelagharthakurgaon.com/soft/assets/images/arabic.png" class="language-img">
+                                        &nbsp;&nbsp;Arabic                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://khelagharthakurgaon.com/soft/admin/welcome/language/english">
+                                        <img src="https://khelagharthakurgaon.com/soft/assets/images/english.png" class="language-img">
+                                        &nbsp;&nbsp;English                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://khelagharthakurgaon.com/soft/admin/welcome/language/french">
+                                        <img src="https://khelagharthakurgaon.com/soft/assets/images/french.png" class="language-img">
+                                        &nbsp;&nbsp;French                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://khelagharthakurgaon.com/soft/admin/welcome/language/german">
+                                        <img src="https://khelagharthakurgaon.com/soft/assets/images/german.png" class="language-img">
+                                        &nbsp;&nbsp;German                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://khelagharthakurgaon.com/soft/admin/welcome/language/indonesian">
+                                        <img src="https://khelagharthakurgaon.com/soft/assets/images/indonesian.png" class="language-img">
+                                        &nbsp;&nbsp;Indonesian                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://khelagharthakurgaon.com/soft/admin/welcome/language/italian">
+                                        <img src="https://khelagharthakurgaon.com/soft/assets/images/italian.png" class="language-img">
+                                        &nbsp;&nbsp;Italian                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://khelagharthakurgaon.com/soft/admin/welcome/language/portuguese-brazilian">
+                                        <img src="https://khelagharthakurgaon.com/soft/assets/images/portuguese-brazilian.png" class="language-img">
+                                        &nbsp;&nbsp;Portuguese-brazilian                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://khelagharthakurgaon.com/soft/admin/welcome/language/simplified-chinese">
+                                        <img src="https://khelagharthakurgaon.com/soft/assets/images/simplified-chinese.png" class="language-img">
+                                        &nbsp;&nbsp;Simplified-chinese                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://khelagharthakurgaon.com/soft/admin/welcome/language/spanish">
+                                        <img src="https://khelagharthakurgaon.com/soft/assets/images/spanish.png" class="language-img">
+                                        &nbsp;&nbsp;Spanish                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://khelagharthakurgaon.com/soft/admin/welcome/language/thai">
+                                        <img src="https://khelagharthakurgaon.com/soft/assets/images/thai.png" class="language-img">
+                                        &nbsp;&nbsp;Thai                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://khelagharthakurgaon.com/soft/admin/welcome/language/traditional-chinese">
+                                        <img src="https://khelagharthakurgaon.com/soft/assets/images/traditional-chinese.png" class="language-img">
+                                        &nbsp;&nbsp;Traditional-chinese                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://khelagharthakurgaon.com/soft/admin/welcome/language/turkish">
+                                        <img src="https://khelagharthakurgaon.com/soft/assets/images/turkish.png" class="language-img">
+                                        &nbsp;&nbsp;Turkish                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://khelagharthakurgaon.com/soft/admin/welcome/language/vietnamese">
+                                        <img src="https://khelagharthakurgaon.com/soft/assets/images/vietnamese.png" class="language-img">
+                                        &nbsp;&nbsp;Vietnamese                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="https://khelagharthakurgaon.com/soft/admin/welcome/toggle_rtl">
+                                    <i class="fa fa-align-left"></i>
+                                    Toggle Alignment                                </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown hidden-xs">
+                            <a class="btn bdarkGreen tip" title="POS" data-placement="bottom" href="https://khelagharthakurgaon.com/soft/admin/pos">
+                            <i class="fa fa-th-large"></i> <span class="padding05">POS</span>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="container" id="container">
+            <div class="row" id="main-con">
+                <table class="lt">
+                    <tr>
+                        <td class="sidebar-con">
+                            <div id="sidebar-left">
+                                <div class="sidebar-nav nav-collapse collapse navbar-collapse" id="sidebar_menu">
+                                    <ul class="nav main-menu">
+                                        <li class="mm_welcome">
+                                            <a href="https://khelagharthakurgaon.com/soft/admin/">
+                                <i class="fa fa-dashboard"></i>
+                                <span class="text"> Dashboard</span>
+                            </a>
+                                        </li>
+
+                                        <li class="mm_products">
+                                            <a class="dropmenu" href="#">
+                                    <i class="fa fa-barcode"></i>
+                                    <span class="text"> Products                                    </span> <span class="chevron closed"></span>
+                                </a>
+                                            <ul>
+                                                <li id="products_index">
+                                                    <a class="submenu" href="https://khelagharthakurgaon.com/soft/admin/products">
+                                            <i class="fa fa-barcode"></i><span class="text"> List Products</span>
+                                        </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="mm_sales ">
+                                            <a class="dropmenu" href="#">
+                                    <i class="fa fa-heart"></i>
+                                    <span class="text"> Sales                                    </span> <span class="chevron closed"></span>
+                                </a>
+                                            <ul>
+                                                <li id="sales_index">
+                                                    <a class="submenu" href="https://khelagharthakurgaon.com/soft/admin/sales">
+                                            <i class="fa fa-heart"></i><span class="text"> List Sales</span>
+                                        </a>
+                                                </li>
+                                                <li id="pos_sales">
+                                                    <a class="submenu" href="https://khelagharthakurgaon.com/soft/admin/pos/sales">
+                                            <i class="fa fa-heart"></i><span class="text"> POS Sales</span>
+                                        </a>
+                                                </li>
+                                                <li id="sales_add">
+                                                    <a class="submenu" href="https://khelagharthakurgaon.com/soft/admin/sales/add">
+                                            <i class="fa fa-plus-circle"></i><span class="text"> Add Sale</span>
+                                        </a>
+                                                </li>
+                                                <li id="sales_deliveries">
+                                                    <a class="submenu" href="https://khelagharthakurgaon.com/soft/admin/sales/deliveries">
+                                            <i class="fa fa-truck"></i><span class="text"> Deliveries</span>
+                                        </a>
+                                                </li>
+                                                <li id="sales_gift_cards">
+                                                    <a class="submenu" href="https://khelagharthakurgaon.com/soft/admin/sales/gift_cards">
+                                            <i class="fa fa-gift"></i><span class="text"> Gift Cards</span>
+                                        </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+
+
+
+
+                                        <li class="mm_auth mm_customers mm_suppliers mm_billers">
+                                            <a class="dropmenu" href="#">
+                                    <i class="fa fa-users"></i>
+                                    <span class="text"> People </span>
+                                    <span class="chevron closed"></span>
+                                </a>
+                                            <ul>
+                                                <li id="customers_index">
+                                                    <a class="submenu" href="https://khelagharthakurgaon.com/soft/admin/customers">
+                                            <i class="fa fa-users"></i><span class="text"> List Customers</span>
+                                        </a>
+                                                </li>
+                                                <li id="customers_index">
+                                                    <a class="submenu" href="https://khelagharthakurgaon.com/soft/admin/customers/add" data-toggle="modal" data-target="#myModal">
+                                            <i class="fa fa-plus-circle"></i><span class="text"> Add Customer</span>
+                                        </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                                <a href="#" id="main-menu-act" class="full visible-md visible-lg">
+                    <i class="fa fa-angle-double-left"></i>
+                </a>
+                            </div>
+                        </td>
+                        <td class="content-con">
+                            <div id="content">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12">
+                                        <ul class="breadcrumb">
+                                            <li class="active">Dashboard</li>
+                                            <li class="right_log hidden-xs">
+                                                Your IP Address 103.69.150.250 <span class='hidden-sm'>( Last login at: 20/01/2026 01:16 IP:  )</span> </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="alert alert-info">
+                                            <a href="#" id="1" class="close hideComment external" data-dismiss="alert">&times;</a>
+                                            <p>Thank you for purchasing Gowsia IT POS. If you find any error/bug, please email to gowsiait@gmail.com with details. You can send us your valued suggestions/feedback too.</p>
+                                            <p>Contact Number: 01717486926</p>
+                                        </div>
+                                        <div class="alerts-con"></div>
+                                        <div class="row" style="margin-bottom: 15px;">
+                                            <div class="col-lg-12">
+                                                <div class="box">
+                                                    <div class="box-header">
+                                                        <h2 class="blue"><i class="fa fa-th"></i><span class="break"></span>Quick Links</h2>
+                                                    </div>
+                                                    <div class="box-content">
+                                                        <div class="col-lg-1 col-md-2 col-xs-6">
+                                                            <a class="bblue white quick-button small" href="https://khelagharthakurgaon.com/soft/admin/products">
+                        <i class="fa fa-barcode"></i>
+                        <p>Products</p>
+                    </a>
+                                                        </div>
+                                                        <div class="col-lg-1 col-md-2 col-xs-6">
+                                                            <a class="bdarkGreen white quick-button small" href="https://khelagharthakurgaon.com/soft/admin/sales">
+                        <i class="fa fa-heart"></i>
+                        <p>Sales</p>
+                    </a>
+                                                        </div>
+                                                        <div class="col-lg-1 col-md-2 col-xs-6">
+                                                            <a class="bgrey white quick-button small" href="https://khelagharthakurgaon.com/soft/admin/customers">
+                        <i class="fa fa-users"></i>
+                        <p>Customers</p>
+                    </a>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="margin-bottom: 15px;">
+                                            <div class="col-md-12">
+                                                <div class="box">
+                                                    <div class="box-header">
+                                                        <h2 class="blue"><i class="fa-fw fa fa-tasks"></i> Latest Five</h2>
+                                                    </div>
+                                                    <div class="box-content">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+
+                                                                <ul id="dbTab" class="nav nav-tabs">
+                                                                    <li class=""><a href="#sales">Sales</a></li>
+                                                                    <li class=""><a href="#customers">Customers</a></li>
+                                                                </ul>
+
+                                                                <div class="tab-content">
+
+                                                                    <div id="sales" class="tab-pane fade in">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-12">
+                                                                                <div class="table-responsive">
+                                                                                    <table id="sales-tbl" cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-hover table-striped" style="margin-bottom: 0;">
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th style="width:30px !important;">#</th>
+                                                                                                <th>Date</th>
+                                                                                                <th>Reference No</th>
+                                                                                                <th>Customer</th>
+                                                                                                <th>Status</th>
+                                                                                                <th>Total</th>
+                                                                                                <th>Payment Status</th>
+                                                                                                <th>Paid</th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td colspan="7" class="dataTables_empty">No data available</td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                    <div id="customers" class="tab-pane fade in">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-12">
+                                                                                <div class="table-responsive">
+                                                                                    <table id="customers-tbl" cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-hover table-striped" style="margin-bottom: 0;">
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th style="width:30px !important;">#</th>
+                                                                                                <th>Company</th>
+                                                                                                <th>Name</th>
+                                                                                                <th>Email</th>
+                                                                                                <th>Phone</th>
+                                                                                                <th>Address</th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr id="1" class="customer_link pointer">
+                                                                                                <td>1</td>
+                                                                                                <td>Walk-in Customer</td>
+                                                                                                <td>Walk-in Customer</td>
+                                                                                                <td>customer@khelagharthakurgaon.com</td>
+                                                                                                <td>0123456789</td>
+                                                                                                <td>Customer Address</td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                </div>
+
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <script type="text/javascript">
+                                            $(document).ready(function() {
+                                                $('.order').click(function() {
+                                                    window.location.href = 'https://khelagharthakurgaon.com/soft/admin/orders/view/' + $(this).attr('id') + '#comments';
+                                                });
+                                                $('.invoice').click(function() {
+                                                    window.location.href = 'https://khelagharthakurgaon.com/soft/admin/orders/view/' + $(this).attr('id');
+                                                });
+                                                $('.quote').click(function() {
+                                                    window.location.href = 'https://khelagharthakurgaon.com/soft/admin/quotes/view/' + $(this).attr('id');
+                                                });
+                                            });
+                                        </script>
+
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <footer>
+            <a href="#" id="toTop" class="blue" style="position: fixed; bottom: 30px; right: 30px; font-size: 30px; display: none;">
+    <i class="fa fa-chevron-circle-up"></i>
+</a>
+
+            <p style="text-align:center;">&copy; 2026 Khela Ghar Thakurgaon (<a href="https://khelagharthakurgaon.com/soft/documentation.pdf" target="_blank">v3.5.2</a> ) </p>
+        </footer>
+    </div>
+    <div class="modal fade in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+    <div class="modal fade in" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true"></div>
+    <div id="modal-loading" style="display: none;">
+        <div class="blackbg"></div>
+        <div class="loader"></div>
+    </div>
+    <div id="ajaxCall"><i class="fa fa-spinner fa-pulse"></i></div>
+    <script type="text/javascript">
+        var dt_lang = {
+                "sEmptyTable": "No data available in table",
+                "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+                "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+                "sInfoFiltered": "(filtered from _MAX_ total entries)",
+                "sInfoPostFix": "",
+                "sInfoThousands": ",",
+                "sLengthMenu": "Show _MENU_ ",
+                "sLoadingRecords": "Loading...",
+                "sProcessing": "Processing...",
+                "sSearch": "Search",
+                "sZeroRecords": "No matching records found",
+                "oAria": {
+                    "sSortAscending": ": activate to sort column ascending",
+                    "sSortDescending": ": activate to sort column descending"
+                },
+                "oPaginate": {
+                    "sFirst": "<< First",
+                    "sLast": "Last >>",
+                    "sNext": "Next >",
+                    "sPrevious": "< Previous"
+                }
+            },
+            dp_lang = {
+                "days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "daysShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+                "daysMin": ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+                "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                "monthsShort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                "today": "Today",
+                "suffix": [],
+                "meridiem": []
+            },
+            site = {
+                "url": "https:\/\/khelagharthakurgaon.com\/soft\/",
+                "base_url": "https:\/\/khelagharthakurgaon.com\/soft\/admin\/",
+                "assets": "https:\/\/khelagharthakurgaon.com\/soft\/themes\/default\/admin\/assets\/",
+                "settings": {
+                    "logo": "Logo-Gowsia-IT.png",
+                    "logo2": "Logo-Gowsia-IT1.png",
+                    "site_name": "Khela Ghar Thakurgaon",
+                    "language": "english",
+                    "default_warehouse": "1",
+                    "accounting_method": "0",
+                    "default_currency": "BDT",
+                    "default_tax_rate": "0",
+                    "rows_per_page": "10",
+                    "version": "3.5.2",
+                    "default_tax_rate2": "1",
+                    "dateformat": "5",
+                    "sales_prefix": "SALE",
+                    "quote_prefix": "QUOTE",
+                    "purchase_prefix": "PO",
+                    "transfer_prefix": "TR",
+                    "delivery_prefix": "DO",
+                    "payment_prefix": "IPAY",
+                    "return_prefix": "SR",
+                    "returnp_prefix": "PR",
+                    "expense_prefix": "",
+                    "item_addition": "0",
+                    "theme": "default",
+                    "product_serial": "1",
+                    "default_discount": "1",
+                    "product_discount": "1",
+                    "discount_method": "1",
+                    "tax1": "0",
+                    "tax2": "1",
+                    "overselling": "0",
+                    "iwidth": "800",
+                    "iheight": "800",
+                    "twidth": "150",
+                    "theight": "150",
+                    "watermark": "0",
+                    "smtp_host": "pop.gmail.com",
+                    "bc_fix": "4",
+                    "auto_detect_barcode": "1",
+                    "captcha": "0",
+                    "reference_format": "2",
+                    "racks": "1",
+                    "attributes": "1",
+                    "product_expiry": "0",
+                    "decimals": "2",
+                    "qty_decimals": "2",
+                    "decimals_sep": ".",
+                    "thousands_sep": ",",
+                    "invoice_view": "0",
+                    "default_biller": "4",
+                    "rtl": "0",
+                    "each_spent": null,
+                    "ca_point": null,
+                    "each_sale": null,
+                    "sa_point": null,
+                    "sac": "0",
+                    "display_all_products": "0",
+                    "display_symbol": "1",
+                    "symbol": "",
+                    "remove_expired": "0",
+                    "barcode_separator": "-",
+                    "set_focus": "0",
+                    "price_group": "1",
+                    "barcode_img": "1",
+                    "ppayment_prefix": "POP",
+                    "disable_editing": "30",
+                    "qa_prefix": "",
+                    "update_cost": "0",
+                    "apis": "0",
+                    "state": "AN",
+                    "pdf_lib": "dompdf",
+                    "use_code_for_slug": "0",
+                    "ws_barcode_type": "weight",
+                    "ws_barcode_chars": "0",
+                    "flag_chars": "0",
+                    "item_code_start": "0",
+                    "item_code_chars": "0",
+                    "price_start": "0",
+                    "price_chars": "0",
+                    "price_divide_by": "0",
+                    "weight_start": "0",
+                    "weight_chars": "0",
+                    "weight_divide_by": "0",
+                    "ksa_qrcode": "0",
+                    "user_language": "english",
+                    "user_rtl": "0",
+                    "indian_gst": false
+                },
+                "dateFormats": {
+                    "js_sdate": "dd\/mm\/yyyy",
+                    "php_sdate": "d\/m\/Y",
+                    "mysq_sdate": "%d\/%m\/%Y",
+                    "js_ldate": "dd\/mm\/yyyy hh:ii",
+                    "php_ldate": "d\/m\/Y H:i",
+                    "mysql_ldate": "%d\/%m\/%Y %H:%i"
+                }
+            };
+        var lang = {
+            paid: 'Paid',
+            pending: 'Pending',
+            completed: 'Completed',
+            ordered: 'Ordered',
+            received: 'Received',
+            partial: 'Partial',
+            sent: 'Sent',
+            r_u_sure: 'Are you sure?',
+            due: 'Due',
+            returned: 'Returned',
+            transferring: 'Transferring',
+            active: 'Active',
+            inactive: 'Inactive',
+            unexpected_value: 'Unexpected value provided!',
+            select_above: 'Please select above first',
+            download: 'Download',
+            required_invalid: 'This value is required or not valid'
+        };
+    </script>
+    <script type="text/javascript" src="https://khelagharthakurgaon.com/soft/themes/default/admin/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://khelagharthakurgaon.com/soft/themes/default/admin/assets/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://khelagharthakurgaon.com/soft/themes/default/admin/assets/js/jquery.dataTables.dtFilter.min.js"></script>
+    <script type="text/javascript" src="https://khelagharthakurgaon.com/soft/themes/default/admin/assets/js/select2.min.js"></script>
+    <script type="text/javascript" src="https://khelagharthakurgaon.com/soft/themes/default/admin/assets/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://khelagharthakurgaon.com/soft/themes/default/admin/assets/js/bootstrapValidator.min.js"></script>
+    <script type="text/javascript" src="https://khelagharthakurgaon.com/soft/themes/default/admin/assets/js/custom.js"></script>
+    <script type="text/javascript" src="https://khelagharthakurgaon.com/soft/themes/default/admin/assets/js/jquery.calculator.min.js"></script>
+    <script type="text/javascript" src="https://khelagharthakurgaon.com/soft/themes/default/admin/assets/js/core.js"></script>
+    <script type="text/javascript" src="https://khelagharthakurgaon.com/soft/themes/default/admin/assets/js/perfect-scrollbar.min.js"></script>
+
+    <script type="text/javascript" charset="UTF-8">
+        var oTable = '',
+            r_u_sure = "Are you sure?";
+        (function($) {
+            "use strict";
+            $.fn.select2.locales['sma'] = {
+                formatMatches: function(matches) {
+                    if (matches === 1) {
+                        return "One result is available, press enter to select it.";
+                    }
+                    return matches + "results are available, use up and down arrow keys to navigate.";
+                },
+                formatNoMatches: function() {
+                    return "No matches found";
+                },
+                formatInputTooShort: function(input, min) {
+                    var n = min - input.length;
+                    return "Please type " + n + " or more characters";
+                },
+                formatInputTooLong: function(input, max) {
+                    var n = input.length - max;
+                    if (n == 1) {
+                        return "Please delete " + n + " character";
+                    } else {
+                        return "Please delete " + n + " characters";
+                    }
+                },
+                formatSelectionTooBig: function(n) {
+                    if (n == 1) {
+                        return "You can only select " + n + " item";
+                    } else {
+                        return "You can only select " + n + " items";
+                    }
+                },
+                formatLoadMore: function(pageNumber) {
+                    return "Loading more results...";
+                },
+                formatSearching: function() {
+                    return "Searching...";
+                },
+                formatAjaxError: function() {
+                    return "Ajax request failed";
+                },
+            };
+            $.extend($.fn.select2.defaults, $.fn.select2.locales['sma']);
+        })(jQuery);
+        $.extend(true, $.fn.dataTable.defaults, {
+            "oLanguage": {
+                "sEmptyTable": "No data available in table",
+                "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+                "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+                "sInfoFiltered": "(filtered from _MAX_ total entries)",
+                "sInfoPostFix": "",
+                "sInfoThousands": ",",
+                "sLengthMenu": "Show _MENU_ ",
+                "sLoadingRecords": "Loading...",
+                "sProcessing": "Processing...",
+                "sSearch": "Search",
+                "sZeroRecords": "No matching records found",
+                "oAria": {
+                    "sSortAscending": ": activate to sort column ascending",
+                    "sSortDescending": ": activate to sort column descending"
+                },
+                "oPaginate": {
+                    "sFirst": "<< First",
+                    "sLast": "Last >>",
+                    "sNext": "Next >",
+                    "sPrevious": "< Previous"
+                }
+            }
+        });
+        $.fn.datetimepicker.dates['sma'] = {
+            "days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "daysShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+            "daysMin": ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+            "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            "monthsShort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            "today": "Today",
+            "suffix": [],
+            "meridiem": []
+        };
+        $(window).load(function() {
+            $('.mm_welcome').addClass('active');
+            $('.mm_welcome').find("ul").first().slideToggle();
+            $('#welcome_index').addClass('active');
+            $('.mm_welcome a .chevron').removeClass("closed").addClass("opened");
+        });
+        // $.fn.modal.prototype.constructor.Constructor.DEFAULTS.backdrop = 'static';
+    </script>
+    <script type="text/javascript" src="https://khelagharthakurgaon.com/soft/assets/custom/custom.js"></script>
+</body>
+
+</html>
